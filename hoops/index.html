@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2D Hoops</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div class="left">
+        <h1>2D Hoops</h1>
+        <div id="controls">
+          <span>Move: A/D or ←/→</span>
+          <span>Jump: W or ↑ or Space</span>
+          <span>Shoot: Hold and release J or K</span>
+          <span>Reset: R</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="stat">Score: <span id="score">0</span></div>
+        <div class="stat">Streak: <span id="streak">0</span></div>
+        <div class="stat">Best: <span id="best">0</span></div>
+        <button id="muteBtn" aria-label="Toggle sound">🔊</button>
+      </div>
+    </div>
+
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="overlay" class="hidden">
+      <div class="card">
+        <h2>Nice Shot! 🏀</h2>
+        <p id="overlayText">Press R to play again</p>
+        <button id="playBtn">Play</button>
+      </div>
+    </div>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
